@@ -4,9 +4,17 @@
   "description": "A Template of simple react roject",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "watchify src/app.js -v -t babelify -o public/static/js/app.js",
+    "build": "browserify src/app.js -t babelify -o public/static/js/app.js",
     "serve": "http-server ./public -p 8080"
   },
   "author": "trapple",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "babelify": "^6.3.0",
+    "browserify": "^11.2.0",
+    "http-server": "^0.8.5",
+    "react": "^0.13.3",
+    "watchify": "^3.4.0"
+  }
 }
